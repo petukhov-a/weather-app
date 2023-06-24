@@ -6,7 +6,7 @@
     list-style-type: none;
     text-decoration: none;
     font-family: 'Quicksand', sans;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 html {
@@ -28,6 +28,16 @@ html {
 }
 
 .temperature-wrapper {
-    font-size: 3rem;
+    text-align: center;
+}
+
+.current-location {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #2d2d2d;
+}
+
+.current-temperature {
+    font-size: 4rem;
     font-weight: 300;
 }
