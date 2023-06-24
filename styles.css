@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Quicksand', sans;
+    font-weight: 500;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.weather-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-heading {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.temperature-wrapper {
+    font-size: 3rem;
+    font-weight: 300;
+}
