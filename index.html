@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
     <title>Weather App</title>
 </head>
 <body>
     <div class="container">
         <section class="weather-section">
-            <h1 class="weather-heading">Weather App</h1>
-            <div class="temperature-wrapper">
+            <header class="weather-header">
+                <h1 class="weather-heading">Weather App</h1>
+            </header>
+            <form class="search-city-form">
+                <input type="text" class="search-city-input" placeholder="Enter Location Name">
+            </form>
+            <div class="current-weather-wrapper">
                 <p class="current-location"></p>
                 <img class="weather-icon-img">
                 <p class="current-temperature"></p>

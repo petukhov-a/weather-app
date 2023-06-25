@@ -5,7 +5,7 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
-    font-family: 'Quicksand', sans;
+    font-family: 'Nunito', sans;
     font-weight: 600;
 }
 
@@ -19,15 +19,45 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.weather-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(11, 175, 250, 0.8), rgb(2, 204, 255), rgb(255, 255, 255, 0.8));
+    margin-bottom: 10rem;
 }
 
 .weather-heading {
     font-size: 5rem;
     text-align: center;
+    color: #fff;
+    text-shadow: 0.1rem 0.1rem 0.2rem #ccc,
+    -0.1rem -0.1rem 0.2rem #ccc;
+}
+
+.search-city-form {
+    width: 30rem;
+    height: 3rem;
     margin-bottom: 5rem;
 }
 
-.temperature-wrapper {
+.search-city-input {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid #555;
+}
+
+.current-weather-wrapper {
     text-align: center;
 }
 
