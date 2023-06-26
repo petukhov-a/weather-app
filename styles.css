@@ -58,8 +58,8 @@ html {
 }
 
 .search-city-input:focus {
-    box-shadow: 0.3rem 0.3rem 0.5rem #ccc,
-    -0.3rem -0.3rem 0.5rem #ccc;
+    box-shadow: 0.1rem 0.1rem 0.2rem #45a2ff,
+    -0.1rem -0.1rem 0.2rem #45a2ff;
 }
 
 .current-weather-wrapper {
@@ -91,8 +91,42 @@ html {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    margin-bottom: 2rem;
 }
 
 .refresh-weather-btn i {
     font-size: 3rem;
+}
+
+.forecast-hour-wrapper {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    padding: 2rem 5rem;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    gap: 3rem;
+}
+
+.forecast-hour-wrapper {
+    overflow-x: scroll;
+}
+
+.forecast-for-hour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.forecast-hour-temperature {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.hour {
+    font-size: 1.4rem;
+    font-weight: 600;
+    opacity: 0.5;
 }

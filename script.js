@@ -1,11 +1,12 @@
 const currentTemperature = document.querySelector('.current-temperature');
 const currentLocation = document.querySelector('.current-location');
-const weatherIconImg = document.querySelector('.weather-icon-img');
+const currentWeatherIconImg = document.querySelector('.current-weather-icon-img');
 const lastUpdated = document.querySelector('.last-updated');
 const searchCityInput = document.querySelector('.search-city-input');
 const searchLocationForm = document.querySelector('.search-location-form');
 const refreshWeatherBtn = document.querySelector('.refresh-weather-btn');
 const refreshIcon = refreshWeatherBtn.querySelector('i');
+const forecastHourWrapper = document.querySelector('.forecast-hour-wrapper');
 
 const api = 'f307338ed98942f6a28203223232406';
 let locationName = 'Moscow';
@@ -19,11 +20,32 @@ const fetchWeather = (url) => {
       .then(response => response.json())
       .then(data => {
         if (data.error === undefined) {
-            console.log(data);
+            let temperature = data.current.temp_c
+            temperature =  temperature > 0 ? '+' + temperature : temperature;
+
             lastUpdated.innerHTML = `<span>Last updated</span> ${data.current.last_updated}`;
             currentLocation.textContent = data.location.name;
-            currentTemperature.textContent = data.current.temp_c + '°C';
-            weatherIconImg.setAttribute('src', data.current.condition.icon);
+            currentTemperature.textContent = temperature + '°C';
+            currentWeatherIconImg.setAttribute('src', data.current.condition.icon);
+            forecastHourWrapper.innerHTML = '';
+
+            const forecastHours = data.forecast.forecastday[0].hour;
+
+            forecastHours.forEach(forecastHour => {
+                const forecastForHourElement = document.createElement('div');
+                const hour = forecastHour.time.split(' ').at(-1);
+                let temperature = forecastHour.temp_c
+                temperature =  temperature > 0 ? '+' + temperature : temperature;
+
+                forecastForHourElement.innerHTML = `
+                    <div class="forecast-for-hour">
+                        <img src=${forecastHour.condition.icon} class="forecast-icon-img">
+                        <p class="forecast-hour-temperature">${temperature}°C</p>
+                        <p class="hour">${hour}</p>
+                    </div>
+                    `
+                forecastHourWrapper.append(forecastForHourElement);
+            })
         }
     },)
       .then(() => refreshIcon.classList.remove('fa-spin'));
