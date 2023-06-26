@@ -36,7 +36,7 @@ html {
     -0.1rem -0.1rem 0.2rem #ccc;
 }
 
-.search-city-form {
+.search-location-form {
     width: 30rem;
     margin-bottom: 3rem;
     margin: 0 auto;
@@ -64,6 +64,15 @@ html {
 
 .current-weather-wrapper {
     text-align: center;
+}
+
+.last-updated {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.last-updated span {
+    color: #2291ff;
 }
 
 .current-location {
