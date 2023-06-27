@@ -32,8 +32,8 @@ html {
     font-size: 5rem;
     text-align: center;
     color: #fff;
-    text-shadow: 0.1rem 0.1rem 0.2rem #ccc,
-    -0.1rem -0.1rem 0.2rem #ccc;
+    text-shadow: 0.1rem 0.1rem 0.3rem #fff,
+    -0.1rem -0.1rem 0.3rem #fff;
 }
 
 .search-location-form {
@@ -84,6 +84,18 @@ html {
 .current-temperature {
     font-size: 4rem;
     font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+.min-max-temperature {
+    margin-bottom: 3rem;
+}
+
+.min-max-temperature span {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    opacity: 0.7;
+    font-weight: 200;
 }
 
 .refresh-weather-btn {
@@ -99,17 +111,17 @@ html {
 }
 
 .forecast-hour-wrapper {
-    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 8rem;
+    transform: translateY(-50%);
+    width: 35%;
     display: flex;
     margin: 0 auto;
     padding: 2rem 5rem;
     flex-wrap: nowrap;
-    overflow-x: hidden;
+    overflow-x: auto;
     gap: 3rem;
-}
-
-.forecast-hour-wrapper {
-    overflow-x: scroll;
 }
 
 .forecast-for-hour {
@@ -129,4 +141,11 @@ html {
     font-size: 1.4rem;
     font-weight: 600;
     opacity: 0.5;
+}
+
+.forecast-3-days-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 5rem;
+    transform: translateY(-50%);
 }
