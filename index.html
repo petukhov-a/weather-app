@@ -21,21 +21,21 @@
             <form class="search-location-form">
                 <input type="text" class="search-city-input" placeholder="Enter Location Name">
             </form>
-            <div class="current-weather-wrapper">
-                <p class="last-updated"></p>
-                <p class="current-location"></p>
-                <img class="current-weather-icon-img">
-                <p class="current-temperature"></p>
-                <p class="min-max-temperature">
-                    <span class="min">10</span>
-                    <span class="max">25</span>
-                </p>
-                <button class="refresh-weather-btn">
-                    <i class="fa-solid fa-rotate-right"></i>
-                </button>
+
+            <div class="weather-forecast-wrapper">
+                <div class="forecast-hour-wrapper"></div>
+                <div class="current-weather-wrapper">
+                    <p class="last-updated"></p>
+                    <p class="current-location"></p>
+                    <img class="current-weather-icon-img">
+                    <p class="current-temperature"></p>
+                    <button class="refresh-weather-btn">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                </div>
+                <div class="forecast-3-days-wrapper">
+                </div>
             </div>
-            <div class="forecast-hour-wrapper"></div>
-            <div class="forecast-3-days-wrapper"></div>
         </section>
     </div>
     <script src="/script.js"></script>
