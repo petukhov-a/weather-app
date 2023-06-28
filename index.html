@@ -14,6 +14,7 @@
 </head>
 <body>
     <div class="container">
+        <!-- Weather Section -->
         <section class="weather-section">
             <header class="weather-header">
                 <h1 class="weather-heading">Weather App</h1>
@@ -22,8 +23,15 @@
                 <input type="text" class="search-city-input" placeholder="Enter Location Name">
             </form>
 
+            <!-- Weather Forecast Wrapper -->
             <div class="weather-forecast-wrapper">
-                <div class="forecast-hour-wrapper"></div>
+                <!-- Forecast Hour Wrapper -->
+                <div class="forecast-hour-wrapper">
+                    <h3 class="forecast-hour-heading forecast-heading">Forecast for hours</h3>
+                    <div class="forecast-for-hours"></div>
+                </div>
+                <!-- End of Forecast Hour Wrapper -->
+                <!-- Current Weather Wrapper -->
                 <div class="current-weather-wrapper">
                     <p class="last-updated"></p>
                     <p class="current-location"></p>
@@ -33,9 +41,16 @@
                         <i class="fa-solid fa-rotate-right"></i>
                     </button>
                 </div>
+                <!-- End of Current Weather Wrapper -->
+                <!-- Forecast 3 Days Wrapper -->
                 <div class="forecast-3-days-wrapper">
+                    <h3 class="forecast-3-days-heading forecast-heading">Forecast for 3 days</h3>
+                    <div class="forecast-3-days"></div>
                 </div>
+                <!-- End of Forecast 3 Days Wrapper -->
             </div>
+            <!-- End of Weather Forecast Wrapper -->
+            <!-- End of Weather Section -->
         </section>
     </div>
     <script src="/script.js"></script>
