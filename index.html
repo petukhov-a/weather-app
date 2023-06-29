@@ -25,23 +25,31 @@
 
             <!-- Weather Forecast Wrapper -->
             <div class="weather-forecast-wrapper">
+                <!-- Current Weather Wrapper -->
+                <div class="current-weather-wrapper">
+                    <div class="current-weather-center">
+                        <p class="last-updated"></p>
+                        <p class="current-location"></p>
+                        <img class="current-weather-icon-img">
+                        <p class="current-temperature"></p>
+                    </div>
+                    <div class="current-weather-left">
+                        <p class="feels-like"><span>Feels like</span>100</p>
+                        <p class="rain-chance"><span>Rain chance</span>100%</p>
+
+                    </div>
+                    <div class="current-weather-right">
+                        <p class="wind-speed"><span>Wind speed</span>15 км/ч</p>
+                        <p class="visibility-km"><span>Visibility</span>10км</p>
+                    </div>
+                </div>
+                <!-- End of Current Weather Wrapper -->
                 <!-- Forecast Hour Wrapper -->
                 <div class="forecast-hour-wrapper">
-                    <h3 class="forecast-hour-heading forecast-heading">Forecast for hours</h3>
+                    <h3 class="forecast-hour-heading forecast-heading">Hourly forecast</h3>
                     <div class="forecast-for-hours"></div>
                 </div>
                 <!-- End of Forecast Hour Wrapper -->
-                <!-- Current Weather Wrapper -->
-                <div class="current-weather-wrapper">
-                    <p class="last-updated"></p>
-                    <p class="current-location"></p>
-                    <img class="current-weather-icon-img">
-                    <p class="current-temperature"></p>
-                    <button class="refresh-weather-btn">
-                        <i class="fa-solid fa-rotate-right"></i>
-                    </button>
-                </div>
-                <!-- End of Current Weather Wrapper -->
                 <!-- Forecast 3 Days Wrapper -->
                 <div class="forecast-3-days-wrapper">
                     <h3 class="forecast-3-days-heading forecast-heading">Forecast for 3 days</h3>
@@ -49,6 +57,9 @@
                 </div>
                 <!-- End of Forecast 3 Days Wrapper -->
             </div>
+            <button class="refresh-weather-btn">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
             <!-- End of Weather Forecast Wrapper -->
             <!-- End of Weather Section -->
         </section>

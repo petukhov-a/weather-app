@@ -73,19 +73,83 @@ html {
     -0.1rem -0.1rem 0.2rem #45a2ff;
 }
 
+/* Weather Forecast Wrapper */
 .weather-forecast-wrapper {
+    width: 100%;
+    padding: 0 10rem;
+    height: 30rem;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
 }
 
+/* Current Weather Wrapper */
 .current-weather-wrapper {
-    text-align: center;
+    width: calc(100% / 3);
+    order: 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.current-weather-center {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    order: 2;
+}
+
+.current-weather-left, .current-weather-right {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    visibility: none;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+.active-current-weather-sides {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.current-weather-left p, .current-weather-right p {
+    width: 12rem;
+    height: 12rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #fff;
+    /* background-color: #46a3ff; */
+    background: linear-gradient(to top left, #46a3ff, #b4dafd);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: inset 0.6rem 0.6rem 0.6rem #fff,
+    inset -0.6rem -0.6rem 0.6rem #fff;
+}
+
+.current-weather-left p span, .current-weather-right p span {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.current-weather-right {
+    order: 3;
 }
 
 .last-updated {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .last-updated span {
@@ -101,28 +165,23 @@ html {
 .current-temperature {
     font-size: 4rem;
     font-weight: 200;
-    margin-bottom: 1rem;
 }
+/* Current Weather Wrapper */
 
-.refresh-weather-btn {
-    margin-top: 2rem;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    margin-bottom: 2rem;
-}
-
-.refresh-weather-btn i {
-    font-size: 3rem;
-}
-
+/* Forecast Hour Wrapper */
 .forecast-hour-wrapper {
-    width: 35%;
+    width: calc(100% / 3);
     height: 22rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    order: 1;
+    transition: transform 0.5s;
+}
+
+.active-hour-wrapper {
+    transform: translateX(-10%);
 }
 
 .forecast-for-hours {
@@ -153,23 +212,32 @@ html {
     font-weight: 600;
     opacity: 0.5;
 }
+/* End of Forecast Hour Wrapper */
 
+/* Forecast 3 Days Wrapper */
 .forecast-3-days-wrapper {
-    width: 35%;
+    width: calc(100% / 3);
     height: 22rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    order: 3;
+    transition: transform 0.5s;
+}
+
+.active-3-days-wrapper {
+    transform: translateX(10%);
 }
 
 .forecast-3-days {
+    width: 100%;
     display: flex;
-    gap: 3rem;
+    justify-content: center;
+    gap: 8rem;
 }
 
 .forecast-for-day {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,10 +249,27 @@ html {
     font-weight: 600;
 }
 
-.min-max-temperature span {
+.min-max-temperature p {
     font-size: 1.6rem;
     margin-right: 1rem;
     opacity: 0.7;
     font-weight: 200;
 }
+/* End of Forecast 3 Days Wrapper */
+
+.refresh-weather-btn {
+    margin-top: 2rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto;
+}
+
+.refresh-weather-btn i {
+    font-size: 3rem;
+}
+/* End of Weather Forecast Wrapper */
 /* End of Weather Section */
