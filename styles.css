@@ -15,43 +15,51 @@ html {
 }
 
 .forecast-heading {
+    width: 30rem;
+    text-align: center;
     font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 3rem;
-    color: #83bef9;
-    opacity: 0.7;
+    font-weight: 200;
+    margin-bottom: 5rem;
+    color: #2592ff;
 }
 /* End of Common Styles */
 
 /* Weather Section */
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
 .weather-section {
     width: 100%;
-    height: 100vh;
+    position: relative;
 }
 
 .weather-header {
-    width: 100%;
-    height: 12rem;
+    width: 150vw;
+    height: 150vw;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom, rgba(11, 175, 250, 0.8), rgb(2, 204, 255), rgb(255, 255, 255, 0.8));
-    margin-bottom: 5rem;
+    align-items: flex-end;
+    padding: 3rem 0;
+    background: linear-gradient(to bottom, #fff 10%, #054cff 90%, #86c5ff 100%);
+    position: absolute;
+    top: -155vw;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
 }
 
 .weather-heading {
     font-size: 5rem;
+    font-weight: 800;
     text-align: center;
     color: #fff;
-    text-shadow: 0.1rem 0.1rem 0.3rem #fff,
-    -0.1rem -0.1rem 0.3rem #fff;
 }
 
 .search-location-form {
     width: 30rem;
-    margin-bottom: 3rem;
-    margin: 0 auto;
-    margin-bottom: 5rem;
+    margin: 20rem auto 5rem auto;
 }
 
 .search-city-input {
@@ -62,15 +70,17 @@ html {
     font-weight: 500;
     color: #303030;
     border-radius: 5px;
-    border: 1px solid #555;
-    box-shadow: 0.1rem 0.1rem 0.2rem #ccc,
-    -0.1rem -0.1rem 0.2rem #ccc;
-    transition: box-shadow 0.2s;
+    border: none;
+    box-shadow: -0.2rem 0.2rem 0.4rem #83bef9,
+    0.2rem 0.2rem 0.4rem #83bef9;
+    border-radius: 10px;
+    transition: all 0.2s;
 }
 
 .search-city-input:focus {
-    box-shadow: 0.1rem 0.1rem 0.2rem #45a2ff,
-    -0.1rem -0.1rem 0.2rem #45a2ff;
+    box-shadow: -0.3rem 0.3rem 0.5rem #83bef9,
+    0.3rem 0.3rem 0.5rem #83bef9;
+    transform: scale(1.01);
 }
 
 /* Weather Forecast Wrapper */
@@ -120,27 +130,24 @@ html {
 }
 
 .current-weather-left p, .current-weather-right p {
-    width: 12rem;
-    height: 12rem;
+    width: 10rem;
+    height: 10rem;
     font-size: 1.6rem;
     font-weight: 300;
-    color: #fff;
-    /* background-color: #46a3ff; */
-    background: linear-gradient(to top left, #46a3ff, #b4dafd);
+    color: #000;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    box-shadow: inset 0.6rem 0.6rem 0.6rem #fff,
-    inset -0.6rem -0.6rem 0.6rem #fff;
+    box-shadow: 0.2rem 0.2rem 0.4rem #33b3fc;
 }
 
 .current-weather-left p span, .current-weather-right p span {
     font-size: 1.4rem;
     font-weight: 800;
-    color: #fff;
+    color: #00a2ff;
 }
 
 .current-weather-right {
@@ -150,6 +157,7 @@ html {
 .last-updated {
     font-size: 1.2rem;
     text-align: center;
+    line-height: 1.8;
 }
 
 .last-updated span {
@@ -157,9 +165,12 @@ html {
 }
 
 .current-location {
-    font-size: 4rem;
-    font-weight: 400;
-    color: #2d2d2d;
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: #fff;
+    background: linear-gradient(to top left, #60adf9, #aad5ff);
 }
 
 .current-temperature {
@@ -171,7 +182,6 @@ html {
 /* Forecast Hour Wrapper */
 .forecast-hour-wrapper {
     width: calc(100% / 3);
-    height: 22rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,17 +191,20 @@ html {
 }
 
 .active-hour-wrapper {
-    transform: translateX(-10%);
+    transform: translateX(-20%);
 }
 
 .forecast-for-hours {
     width: 100%;
+    height: 20rem;
+    padding: 0 2rem;
     display: flex;
-    padding: 2rem 5rem;
     align-items: center;
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 3rem;
+    box-shadow: -0.6rem 0.6rem 0.8rem #83bef9;
+    border-radius: 20px;
 }
 
 .forecast-for-hour {
@@ -217,7 +230,6 @@ html {
 /* Forecast 3 Days Wrapper */
 .forecast-3-days-wrapper {
     width: calc(100% / 3);
-    height: 22rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -227,14 +239,18 @@ html {
 }
 
 .active-3-days-wrapper {
-    transform: translateX(10%);
+    transform: translateX(20%);
 }
 
 .forecast-3-days {
     width: 100%;
+    height: 20rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 8rem;
+    box-shadow: -0.6rem 0.6rem 0.8rem #83bef9;
+    border-radius: 20px;
 }
 
 .forecast-for-day {
@@ -245,7 +261,7 @@ html {
 }
 
 .forecast-for-day .forecast-date {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
 }
 
